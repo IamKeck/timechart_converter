@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>タイムスケジュール変換</title>
+</head>
+<body>
+<p>生データを入力</p>
+<textarea id="raw"></textarea>
+<button id="get_ans">変換</button>
+<p>出力データ</p>
+<textarea id="result"></textarea>
+</body>
+<script>
+    const {get_ans} = require("./libs");
+
+    document.getElementById("get_ans").addEventListener("click", () => {
+        const ans = get_ans(document.getElementById("raw").value);
+        document.getElementById("result").value = ans;
+    });
+
+
+
+</script>
+</html>
